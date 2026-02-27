@@ -1,0 +1,76 @@
+/* ১০০% ফিক্সড ডার্ক থিম ডিজাইন */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* সরাসরি কালো রঙ ব্যবহার করা হয়েছে যাতে ইমেজ লোড না হলেও সমস্যা না হয় */
+    background-color: #000000 !important; 
+    color: #ffffff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.booking-card {
+    background: #1a1a1a; /* কার্ডের রঙ গাঢ় ধূসর */
+    border: 1px solid #333;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px; /* মোবাইলের জন্য পারফেক্ট সাইজ */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group label {
+    display: block;
+    color: #aaaaaa; /* লেবেলের রঙ কিছুটা হালকা */
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+select, input {
+    width: 100%;
+    padding: 12px;
+    background-color: #2d2d2d; /* ইনপুট বক্সের ব্যাকগ্রাউন্ড */
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #ffffff !important; /* লেখার রঙ সবসময় সাদা থাকবে */
+    font-size: 15px;
+    outline: none;
+}
+
+/* সার্চ বাটন ফিক্স */
+.btn-search {
+    width: 100%;
+    background-color: #ff4757; /* উজ্জ্বল লাল রঙ */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* রেডিও বাটন ফিক্স */
+.trip-type {
+    display: flex;
+    gap: 15px;
+    color: #ffffff;
+    font-size: 14px;
+}
