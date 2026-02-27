@@ -1,83 +1,85 @@
-/* প্রফেশনাল ফন্ট ইমপোর্ট */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+/* মডার্ন ইন্টারফেসের জন্য ফন্ট ইমপোর্ট */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #003580; /* এয়ারলাইন ব্লু */
+    --accent-color: #00b894;  /* সাকসেস গ্রিন */
+    --bg-light: #f4f7f6;
+    --white: #ffffff;
+    --text-dark: #2d3436;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    /* একটি প্রিমিয়াম এভিয়েশন ব্যাকগ্রাউন্ড */
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
+    background-color: var(--bg-light);
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
     padding: 20px;
 }
 
-/* মেইন গ্লাস কার্ড ডিজাইন */
+/* মেইন কন্টেইনার */
 .booking-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 50px;
+    background: var(--white);
     width: 100%;
-    max-width: 1000px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-    color: #ffffff;
-    animation: fadeIn 1s ease-in-out;
+    max-width: 1100px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-top: 6px solid var(--primary-color); /* টপ বর্ডার হাইলাইট */
 }
 
+/* হেডার সেকশন */
 h2 {
-    font-size: 36px;
+    background: #f8f9fa;
+    padding: 25px;
+    color: var(--primary-color);
+    font-size: 24px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
     font-weight: 700;
-    text-align: center;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
-/* ট্রিপ টাইপ রেডিও বাটন ডিজাইন */
+/* ফর্ম প্যাডিং */
+form {
+    padding: 40px;
+}
+
+/* ট্রিপ টাইপ বাটনগুলো */
 .trip-type {
+    margin-bottom: 30px;
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 35px;
+    gap: 25px;
 }
 
 .trip-type label {
-    font-weight: 500;
+    font-size: 15px;
+    color: var(--text-dark);
+    font-weight: 600;
     cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    transition: 0.3s all ease;
-    border: 1px solid transparent;
-}
-
-.trip-type label:hover {
-    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
 }
 
 .trip-type input[type="radio"] {
+    width: 18px;
+    height: 18px;
     margin-right: 8px;
-    accent-color: #00d2ff; /* সিগনেচার কালার */
+    accent-color: var(--primary-color);
 }
 
-/* ইনপুট গ্রিড সেটিংস */
+/* ইনপুট গ্রিড */
 .input-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(4, 1fr); /* ৪ কলামের ড্যাশবোর্ড লুক */
+    gap: 20px;
 }
 
 .input-group {
@@ -86,69 +88,68 @@ h2 {
 }
 
 .input-group label {
-    margin-bottom: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #e0e0e0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #636e72;
+    margin-bottom: 8px;
     text-transform: uppercase;
 }
 
-/* ইনপুট ও সিলেক্ট বক্স ডিজাইন */
-select, input[type="date"] {
-    padding: 15px;
-    border-radius: 15px;
-    border: none;
-    background: rgba(255, 255, 255, 0.95);
-    color: #2c3e50;
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.3s;
-    cursor: pointer;
+/* ইনপুট স্টাইলিং */
+select, input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dfe6e9;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 15px;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
 }
 
 select:focus, input:focus {
+    border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
-    transform: translateY(-2px);
+    box-shadow: 0 0 0 3px rgba(0, 53, 128, 0.1);
 }
 
-/* সার্চ বাটন ডিজাইন */
+/* সার্চ বাটন - অ্যাডভান্সড লুক */
 .btn-search {
-    grid-column: span 2;
-    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    grid-column: span 4; /* পুরো লাইন জুড়ে */
+    background-color: var(--primary-color);
     color: white;
-    padding: 18px;
+    padding: 16px;
     border: none;
-    border-radius: 15px;
-    font-size: 20px;
+    border-radius: 6px;
+    font-size: 18px;
     font-weight: 700;
+    margin-top: 25px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: 0.4s;
-    box-shadow: 0 10px 20px rgba(58, 123, 213, 0.3);
+    transition: background 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn-search:hover {
-    letter-spacing: 2px;
-    box-shadow: 0 15px 30px rgba(58, 123, 213, 0.5);
-    transform: scale(1.02);
+    background-color: #00265a;
+    box-shadow: 0 5px 15px rgba(0, 53, 128, 0.2);
 }
 
-/* অ্যানিমেশন */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* রেসপন্সিভ সেটিংস */
+@media (max-width: 900px) {
+    .input-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .btn-search {
+        grid-column: span 2;
+    }
 }
 
-/* রেসপন্সিভ ডিজাইন */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .input-grid {
         grid-template-columns: 1fr;
     }
     .btn-search {
         grid-column: span 1;
     }
-    .booking-card {
-        padding: 30px;
-    }
-  }
+}
